@@ -1,4 +1,4 @@
-# Task_Reminder_Application-Angular_Frontend V7.0
+# Task_Reminder_Application-Angular_Frontend V7.3.8
 
 It is a frontend created using Angular. Created with Django Rest Framework(DRF) as a backend. Along with celery for task scheduling.
 
