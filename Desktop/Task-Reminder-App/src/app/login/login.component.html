@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+</head>
+<body>
+
+  <main class="login-form" *ngIf="!_userService.token && displayLogin">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header" style="color:white;text-align:center;background-color:#632342;"><b>Task Reminder App</b></div>
+                    <div class="card-body">
+                     
+                        <form name="Form" ngNativeValidate>
+                          
+                           
+                              <div >
+                              <div class="col-md-12 form-group">
+                                  <label>Username</label>
+                                  <input class="form-control" name="Username"  id="myTextBox" autofocus pattern="[A-Za-z]{1,100}"  type="text" [(ngModel)]="user.username">
+                                  <span  id='hideMe' *ngFor="let error of _userService.errors1.username"><br />
+                                    {{ error }}</span>
+                                </div>
+                                                           
+                              <div class="col-md-12 form-group">
+                                  <label>Password</label>
+                                  <input class="form-control" type="password" name="login-password" [(ngModel)]="user.password">
+                                  <span  id='hideMe' *ngFor="let error of _userService.errors1.password"><br />
+                                    {{ error }}</span>
+                                </div>
+                             <div style="display:block;"><pre>
+</pre></div>
+                              <button (click)="login()" name="submit" style="background-color:#342543;"  class="btn btn-primary btn-lg btn-block">Login</button>
+                              
+
+                              <div class="col-md-12" style="text-align:center;">
+                                <span *ngFor="let error of _userService.errors1.non_field_errors"><br />{{ error }}<br /></span>
+                              </div>
+
+
+                              <br/>
+                              <div class="col-md-12" style="text-align:center;">
+                              <a href='whatever' onclick='return false;' (click)="setBoolean1()" >Register</a>
+                              </div>                          
+                               
+                            
+                          </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+
+
+<main class="login-form" *ngIf="_userService.token">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+              <div class="card">
+                  <div class="card-header" style="color:white;text-align:center;background-color:#632342;"><b>To Logout Press Here</b></div>
+                <div class="card-body col-sm-12">
+                  <button (click)="logout()" class="btn btn-lg btn-block" style="background-color:rgb(116, 21, 95);color:white;">Log Out</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<main class="register-form" *ngIf="!_userService.token && displayRegister">
+  <div class="cotainer">
+      <div class="row justify-content-center">
+          <div class="col-md-5">
+              <div class="card">
+                  <div class="card-header" style="color:white;text-align:center;background-color:#632342;"><b>Register Here</b></div>
+                  <div class="card-body">
+                   
+                      <form name="Form" ngNativeValidate>
+                        
+                         
+                            <div >
+                            <div class="col-md-12 form-group">
+                                <label>Username</label>
+                                <input class="form-control" name="username"  id="myTextBox" autofocus  type="text" [(ngModel)]="user.username">
+                                <span  id='hideMe' *ngFor="let error of _userService.errors2.username"><br />
+                                  {{ error }}</span>
+                              </div>
+
+                              <div class="col-md-12 form-group">
+                                <label>Email Address</label>
+                                <input class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="user.email"> 
+                                <span  id='hideMe' *ngFor="let error of _userService.errors2.email"><br />
+                                  {{ error }}</span>
+                              </div>
+                                                         
+                            <div class="col-md-12 form-group">
+                                <label>Password</label>
+                                <input class="form-control"  type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" [(ngModel)]="user.password">
+                                <span  id='hideMe' *ngFor="let error of _userService.errors2.password"><br />
+                                  {{ error }}</span>
+                              </div>
+                           <div style="display:block;"><pre>
+</pre></div>
+                            <button (click)="register()" name="submit" style="background-color:#342543;"  class="btn btn-primary btn-lg btn-block">Register</button>
+                            <br />
+
+                            <div *ngIf="_userService.registerSuccess" style="text-align:center;">
+                              <h4 id="element"> Registration successful<br /> Press login to continue  </h4>
+                            </div>
+
+                            <div class="col-md-12" style="text-align:center;">
+                              <span *ngFor="let error of _userService.errors2.non_field_errors"><br />{{ error }}<br /></span>
+                            </div>
+
+                            <div class="col-md-12" style="text-align:center;">
+                              <a href='whatever' onclick='return false;' (click)="setBoolean2();setRegisterSuccess();" >Login</a>
+                            </div>                                                    
+                              
+                        
+                          
+                        </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+</main>
+
+
+</body>
+</html>
+

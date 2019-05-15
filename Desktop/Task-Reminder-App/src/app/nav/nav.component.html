@@ -1,0 +1,66 @@
+<div  *ngIf="_userService.token">
+    <nav class="navbar   navbar-expand-lg fixed-top" style="background-color:rgb(116, 21, 95);">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-navicon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active"><b>Home</b></a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active"><b>Logout</b></a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/createtask" routerLinkActive="active"><b>CreateTask</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/viewtask" routerLinkActive="active"><b>View All Task</b></a>    
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/view_task_of_a_user" routerLinkActive="active"><b>View Task Of A User</b></a>    
+          </li>        
+          <li class="nav-item ">
+            <a class="nav-link" routerLink="/reminders" routerLinkActive="active"><b>View My Notifications</b></a>
+          </li> 
+        </ul>
+          <ul class="navbar-nav">    
+            <li class="nav-item">
+                <a class="nav-link" style="color:white;"><i class="fa fa-facebook"></i></a>
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link" style="color:white;"><i class="fa fa-twitter"></i></a>
+            </li>    
+          </ul>
+          
+      </div>
+    </nav>
+  </div>
+
+
+  <div  *ngIf="!_userService.token">
+    <nav class="navbar   navbar-expand-lg fixed-top" style="background-color:rgb(116, 21, 95);">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-navicon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">      
+        <ul class="navbar-nav">   
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active"><b>Home</b></a>
+          </li>                
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active"><b>Register/Login</b></a> 
+          </li>
+        </ul> 
+          <ul class="navbar-nav">    
+            <li class="nav-item">
+                <a class="nav-link" style="color:white;"><i class="fa fa-facebook"></i></a>
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link" style="color:white;"><i class="fa fa-twitter"></i></a>
+            </li>    
+          </ul>          
+        
+      </div>
+    </nav>
+  </div>

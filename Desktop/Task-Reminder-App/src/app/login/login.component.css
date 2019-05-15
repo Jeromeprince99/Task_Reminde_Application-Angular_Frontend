@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+
+#hideMe {
+    -moz-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 2s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
+
+#element {
+    -moz-animation: cssAnimation 2s ease-in;
+    /* Firefox */
+    -webkit-animation: cssAnimation 2s ease-in;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 2s ease-in;
+    /* Opera */
+    animation: cssAnimation 2s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+  0%   {opacity: 1;display: block;}
+  /* 2 sec : start fading in*/
+  30%   {opacity: 1;display:block;}
+  /* 2.5 sec : visible */
+  40%   {opacity: 1;display:block;}
+  /* 4.5 sec : start fading out */
+  70%   {opacity: 1;display:block;}
+  /* 5 sec : not visible */
+  80%   {opacity: 0;display:block;}
+  /* 6 sec */
+  100%   {opacity: 0;display:none;}
+}
+@-webkit-keyframes cssAnimation {
+  0%   {opacity: 1;display:block;}
+  /* 2 sec : start fading in*/
+  30%   {opacity: 1;display:block;}
+  /* 2.5 sec : visible */
+  40%   {opacity: 1;display:block;}
+  /* 4.5 sec : start fading out */
+  70%   {opacity: 1;display:block;}
+  /* 5 sec : not visible */
+  80%   {opacity: 0;display:block;}
+  /* 6 sec */
+  100%   {opacity: 0;display:none;}
+}
+
+
+a:hover{
+  text-decoration: none !important;
+}
+
+body{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+    background-color: #f5f8fa;
+}
+
+
+
+.my-form, .login-form, .register-form
+{
+    font-family: Raleway, sans-serif;
+}
+
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-form, .register-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.login-form .row, .register-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
