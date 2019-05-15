@@ -17,4 +17,7 @@ Installation and Usage:
  4. Navigate to the project folder in terminal
  5. Enter "ng serve" and go to "http://localhost:4200" and enjoy the app
  
+ Notification UI ->
+ ![notification-page](https://user-images.githubusercontent.com/40189639/57775144-fe9c2d00-7739-11e9-8c0b-5cfda40eb4b6.jpg)
+ 
  
