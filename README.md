@@ -11,10 +11,10 @@ Requirements:
 -> Involves Websockets Services
 
 Installation and Usage:
- --> Install the requirements
- --> Clone this repository using command => $ git clone https://github.com/Jeromeprince99/Task_Reminder_Application-Angular_Frontend.git
- --> Install extensions for Angular in VS code IDE
- --> Navigate to the project folder in terminal
- --> Enter "ng serve" and go to "http://localhost:4200" and enjoy the app
+ > Install the requirements
+ > Clone this repository using command => $ git clone https://github.com/Jeromeprince99/Task_Reminder_Application-Angular_Frontend.git
+ > Install extensions for Angular in VS code IDE
+ > Navigate to the project folder in terminal
+ > Enter "ng serve" and go to "http://localhost:4200" and enjoy the app
  
  
