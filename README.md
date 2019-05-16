@@ -19,6 +19,8 @@ Installation and Usage:
  4. Navigate to the project folder in terminal
  5. Enter "ng serve" and go to "http://localhost:4200" and enjoy the app
  
+>To run this app, u need the Django backend which is not included in this repository. U can find the Django backend of this app and installation,usage instructions here in this repository : https://github.com/krishtna999/task-reminder-backend
+
  
  
  Notification UI ->
