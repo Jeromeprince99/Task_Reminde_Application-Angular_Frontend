@@ -5,10 +5,10 @@ It is a frontend created using Angular. Created with Django Rest Framework(DRF) 
 This is a simple system where users can create tasks for each other, set reminders, and receive notifications at the reminder time.
 
 Requirements:
-1.Node
-2.npm
-3.angular@cli
-4.VS extensions for Angular
+ 1. Node
+ 2. npm
+ 3. angular@cli
+ 4. VS extensions for Angular
 
 -> Involves Websockets Services
 
@@ -19,7 +19,7 @@ Installation and Usage:
  4. Navigate to the project folder in terminal
  5. Enter "ng serve" and go to "http://localhost:4200" and enjoy the app
  
->To run this app, u need the Django backend which is not included in this repository. U can find the Django backend of this app and installation,usage instructions here in this repository : https://github.com/krishtna999/task-reminder-backend
+>To run this app, u need the Django backend which is not included in this repository. U can find the Django backend of this app and installation,usage instructions here in this repository : https://github.com/krishtna999/task-reminder
 
  
  
